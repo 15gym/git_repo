@@ -1,0 +1,7 @@
+
+8월 31, 2018 11:39:48.94 NEW SESSION
+8월 31, 2018 11:39:48.94 [4048:6992:0831/113948.866:ERROR:service_manager_context.cc(250)] Attempting to run unsupported native service: C:\Program Files (x86)\Google\Chrome\Application\68.0.3440.106\content_browser.service.exe
+
+9월 04, 2018 12:47:55.21 NEW SESSION
+9월 04, 2018 12:47:55.21 [8040:3436:0904/124755.211:ERROR:service_manager_context.cc(250)] Attempting to run unsupported native service: C:\Program Files (x86)\Google\Chrome\Application\68.0.3440.106\content_browser.service.exe
+9월 04, 2018 12:47:55.22 [8040:3436:0904/124755.211:ERROR:service_manager_context.cc(250)] Attempting to run unsupported native service: C:\Program Files (x86)\Google\Chrome\Application\68.0.3440.106\content_browser.service.exe

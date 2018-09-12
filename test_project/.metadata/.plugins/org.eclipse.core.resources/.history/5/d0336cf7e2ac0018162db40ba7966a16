@@ -1,0 +1,44 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style type="text/css">
+	fieldset {
+		border: 1px solid #ccc;
+		width: 270px;
+		height: 100px;
+	}
+	input {
+		border: 1px solid #ccc;
+		width: 240px;
+		height: 25px;
+		padding: 3px 10px 3px 10px;
+		margin: 5px;
+		background-image: url(img/input.png);
+		background-repeat: no-repeat;
+	}
+	input#id {
+		background-position: 10px -3px;
+	}
+	input#pw {
+		background-position: 10px -43px;
+	}
+</style>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+	<form action="" name="form1">	
+		<fieldset>
+			<legend>로그인</legend>
+			<input type="text" name="user_id" id="id"/>
+			<input type="password" name="user_pw" id="pw"/>
+		</fieldset>
+	</form>
+</body>
+</html>

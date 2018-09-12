@@ -1,0 +1,53 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<style type="text/css">
+	/** 빈 요소를 숨김. 각 span안에 드롭다운을 출력하게 됨 */
+	form > span { display: none;}
+</style>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		// 기본적으로 1depth의 드롭다운을 로드함
+		$("#category1").load("ajax/text/category-data.html #category1-1",
+				function() {
+					// 로딩이 완료되면 드롭다운을 감싸는 태그 요소를 화면에 표시함
+					$(this).show();
+				}
+		);
+	});
+</script>
+</head>
+<body>
+<h1 class="title">동적 드롭다운</h1>
+<div class="exec">
+	<form>
+		<!-- 각 단계별 dropdown을 표시할 span태그 -->
+		<span id="category1"></span>
+		<span id="category2"></span>
+		<span id="category3"></span>
+	</form>
+</div>
+<!-- 최종 선택 결과를 표시할 곳 -->
+<div class="console"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
