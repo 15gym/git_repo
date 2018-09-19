@@ -5,6 +5,10 @@
 	text-align: center;
 }
 
+.inner {
+	background-color: white;
+}
+
 table {
 	border-top: 2px solid black;
 	width: 50%;
@@ -17,7 +21,7 @@ td {
 }
 
 .td1 {
-	background-color: #eee;	
+	background-color: #eee;
 	width: 200px;
 }
 
@@ -28,9 +32,3 @@ td {
 }
 
 
-.button_group {
-	width: 500px;
-	height: 300px;
-	margin-left: auto;
-	margin-right: auto;
-}

@@ -46,6 +46,15 @@ body {
 }
 
 
+#header {
+	min-width: 1200px;
+	height: 200px;
+	background: url(../../img/header_main.jpg) no-repeat center center;
+	margin: 0px;
+	text-align: center;
+	vertical-align: middle;
+	padding-top: 10px;;
+}
 
 
 

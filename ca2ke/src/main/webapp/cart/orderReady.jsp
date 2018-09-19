@@ -8,19 +8,18 @@
 <title>주문/결제</title>
 <link rel="stylesheet" href="../assets/css/common.css" />
 <link rel="stylesheet" href="../assets/css/order_confirm.css" />
-<link rel="stylesheet" href="../assets/css/order_ready.css" />
 </head>
 <body>
 	<div class="container">
 	<div id="cart" class="inner">
 		<h2>주문/결제</h2>
-		<table border="1">
+		<table>
 				<tr>
-					<td colspan="2">상품 정보</td>
-					<td>수량</td>
-					<td>상품금액</td>
-					<td>픽업날짜</td>
-					<td>주문금액</td>
+					<td class="td1">상품 정보</td>
+					<td class="td1">수량</td>
+					<td class="td1">상품금액</td>
+					<td class="td1">픽업날짜</td>
+					<td class="td1">주문금액</td>
 				</tr>
 				
 				<c:forEach var="dto" items="${cartList}">
@@ -40,19 +39,16 @@
 				</c:forEach>
 				
 				<tr>
-					<td colspan="4"></td>
-					<td>결제금액</td>
-					<td>${sum }원</td>
+					<td colspan="5" align="right">결제금액 ${sum }원</td>
 				</tr>
 			</table>
-	</div>
-	<div id="memberInfo" class="inner">
-		<h2>주문자 정보</h2>
+	<br /><hr /><br />
+		<h2>주문자 정보<input type="button" value="정보수정" class="btn-bordered" 
+		style="width: 70px; height: 40px;font-size: 1rem; padding:0; margin-left: 30px;
+		"></h2>
 		<label>회원이름</label><span>${memberDTO.m_name }</span><br>
 		<label>핸드폰번호</label><span>${memberDTO.m_phone }</span><br>
-		<input type="button" value="정보수정" class="btn-bordered">
-	</div>
-	<div class="inner">
+	<br /><hr /><br />
 	<form id="orderReady" method="post" action="orderConfirm">
 		<input type="hidden" name="m_id" value="${sessionScope.m_id }">
 		<input type="hidden" name="sum" value="${sum }">
@@ -64,11 +60,14 @@
 			<div id="paymentDetail"><label id="default"></label></div>  <!--jquery로 출력  -->
 			<input type="hidden" name="bank" id="bank" value="">
 			
-			<label><input type="checkbox" name="orderOk" id="orderOk">결제 진행 동의</label><br>
-			<input type="button" value="결제하기" class="btn-primary">
-			<input type="button" value="홈" onclick="" class="btn-default">
+			<label><input type="checkbox" name="orderOk" id="orderOk">결제 진행 동의</label><br><br /><br />
+			
 		</div>
 	</form>
+	</div>
+	<div class="button_group">
+				<input type="button" value="결제하기" class="btn-primary">
+				<input type="button" value="홈" onclick="" class="btn-default">
 	</div>
 	</div>
 	

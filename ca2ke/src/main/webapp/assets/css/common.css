@@ -95,7 +95,6 @@ option {
 
 
 .container {
-	background-color: #F3EED7;
 	width: 70%;
 	min-width: min-content;
 	min-height: 800px;
@@ -111,7 +110,7 @@ option {
 
 .title {
   width: auto;
-  height: 50px;
+  height: 30px;
   padding: 20px;
   background-color: #756e6c;
   color: white;
@@ -124,4 +123,11 @@ option {
 .menu {
     width: 20%;
     display: inline-block;
+}
+
+.button_group {
+	width: 500px;
+	height: 300px;
+	margin-left: auto;
+	margin-right: auto;
 }

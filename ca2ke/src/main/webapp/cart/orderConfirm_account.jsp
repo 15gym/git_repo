@@ -16,10 +16,6 @@
 				
 				<table class="confirm">
 					<tr>
-						<td class="td1">주문번호</td>
-						<td class="td2">내용</td>
-					</tr>
-					<tr>
 						<td class="td1">주문자명</td>
 						<td class="td2">${sessionScope.m_name }님</td>
 					</tr>

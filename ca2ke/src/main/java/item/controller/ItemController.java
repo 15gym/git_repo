@@ -5,7 +5,6 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -13,18 +12,45 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+import item.bean.CategoryDTO;
 import item.bean.ItemDTO;
+import item.dao.CategoryDAO;
 
 @Controller
 public class ItemController {
 
 	@Autowired
 	private ItemService itemService;
+	@Autowired
+	private CategoryDAO cateDao;
+	
+	@RequestMapping(value="/admin/addCategory")
+	public ModelAndView addCategory(CategoryDTO dto, MultipartFile img) {
+		System.out.println("start!!!!!!!!!!");
+		ModelAndView modelAndView = new ModelAndView();
+		String path = 
+				"F:\\java_web_4\\project\\workspace\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\ca2ke\\storage";
+		String fname = img.getOriginalFilename();
+		
+		File file = new File(path, fname);
+		try {
+			FileCopyUtils.copy(img.getInputStream(), new FileOutputStream(file));
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		
+		dto.setCategory_image(fname);
+		int result = cateDao.addCategory(dto);
+		System.out.println(result);
+		modelAndView.setViewName("admin_main.jsp");
+		return modelAndView;
+	}
 	
 	@RequestMapping(value="/item/itemList")
 	public ModelAndView itemList(HttpServletRequest request) {

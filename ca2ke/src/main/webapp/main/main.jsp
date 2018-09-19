@@ -25,12 +25,6 @@
 
 
 
-
-
-
-
-
-
     <div id="nav">
     	<div class="jcarousel">
 			<ul  class="nav_ul">
@@ -75,7 +69,7 @@
   
     <div id="section">
 		<c:if test="${display == null}">
-		<jsp:include page="../cart/orderReady.jsp"/>
+		<jsp:include page="../myPage.jsp"/>
 		<!-- 
 			<h4 align="center">이페이지는 빈페이지 입니다. <br/>
 				완성후에는 보이지 않을 페이지입니다.
