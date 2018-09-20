@@ -158,6 +158,10 @@
 
 			</div>
 			<div id="map" style="width:auto;height:400px;"></div>
+			<div class="custom_zoomcontrol radius_border"> 
+		        <span onclick="zoomIn()"><img src="http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_plus.png" alt="확대"></span>  
+		        <span onclick="zoomOut()"><img src="http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_minus.png" alt="축소"></span>
+		    </div>
 		</div>
     </div>
     
@@ -199,7 +203,10 @@
     
     
     
-    
+<script type="text/javascript" src="../assets/js/jquery.js"></script>
+<script type="text/javascript" src="../assets/js/jcarousel/jquery.jcarousel.min.js"></script>
+<script type="text/javascript" src="../assets/js/jcarousel/jcarousel.responsive.js"></script>
+<script type="text/javascript" src="../assets/js/index.js"></script>
 <script type="text/javascript" 
 	src="//dapi.kakao.com/v2/maps/sdk.js?appkey=117d1f1a8f683da7edfa43ace732ffd0"></script>
 <script type="text/javascript" 
@@ -213,7 +220,7 @@
 	};
 	
 	var map = new daum.maps.Map(mapContainer, mapOption);
-		 
+	map.setZoomable(false);
 	var points = [
 	    new daum.maps.LatLng(37.571008, 126.992385),
 	    new daum.maps.LatLng(37.496669, 127.030146),
@@ -245,11 +252,15 @@
 	    panTo(latlng.getLat(), latlng.getLng());
 
 	});
+	
+	function zoomIn() {
+	    map.setLevel(map.getLevel() - 1);
+	}
+
+	function zoomOut() {
+	    map.setLevel(map.getLevel() + 1);
+	}
 </script>
-<script type="text/javascript" src="../assets/js/jquery.js"></script>
-<script type="text/javascript" src="../assets/js/jcarousel/jquery.jcarousel.min.js"></script>
-<script type="text/javascript" src="../assets/js/jcarousel/jcarousel.responsive.js"></script>
-<script type="text/javascript" src="../assets/js/index.js"></script>
 <script type="text/javascript">
 	var xdata = new Array(3);
 	xdata[0] = 37.571008;
