@@ -21,12 +21,7 @@
 			</ul>
 		</div>
 		<div id="section">
-      		<jsp:include page="addCategory.jsp"/>
-      		<br /><br /><hr /><br /><br />
-      		<!-- 
-      		<jsp:include page="../item/itemAddForm.jsp"/>
-      		<br /><br /><hr /><br /><br />
-      		 -->
+			<jsp:include page="admin_item.jsp"/>
 		</div>
 		<div id="footer">
 			

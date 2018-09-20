@@ -19,10 +19,11 @@ public class ItemDAO {
 		return sqlSession.selectList("mybatis.item.itemList", i_category);
 	
 	}
-
+	
 	public int getTotalA(int i_category) {
-		System.out.println(i_category);
-		return sqlSession.selectOne("mybatis.item.getTotalA", i_category);
+		System.out.println(i_category); 
+		return sqlSession.selectOne("mybatis.item.getTotalA", i_category); 
+
 	}
 
 	public int itemAdd(ItemDTO itemDTO) {

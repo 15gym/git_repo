@@ -10,14 +10,14 @@
 <body>
 	<h3>카테고리 추가</h3>
 	<br /><hr /><br /><br />
-	<form action="addCategory" method="post" enctype="multipart/form-data">
+	<form action="../addCategory" method="post" enctype="multipart/form-data">
 		  <div class="form-group">
 		    <label for="category_name">카테고리명</label>
 		    <input type="text" class="form-control" name="category_name" required="required">
 		  </div>
 		  <div class="form-group">
-		    <label for="category_image">카테고리 이미지</label>
-		    <input type="file" class="form-control-file" name="category_image" required="required">
+		    <label for="img">카테고리 이미지</label>
+		    <input type="file" class="form-control-file" name="img" required="required">
 		  </div>
 
 		   

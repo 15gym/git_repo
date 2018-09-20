@@ -10,7 +10,7 @@
 		<typeAlias type="order.bean.OrderlistListDTO" alias="orderlistListDTO"/>
 		<typeAlias type="dto.MemberDTO" alias="memberDTO"/>
 		<typeAlias type="item.bean.ItemDTO" alias="itemDTO"/>
-		<typeAlias type="item.bean.CategoryDTO" alias="cateDTO"/>
+		<typeAlias type="category.bean.CategoryDTO" alias="category"/>
 	</typeAliases>
 
 	<mappers>
@@ -18,6 +18,6 @@
 		<mapper resource="mybatis/member-mapping.xml"/>
 		<mapper resource="mybatis/orderlist-mapping.xml"/>
 		<mapper resource="mybatis/item_mapper.xml" />
-		<mapper resource="mybatis/admin-mapping.xml"/>
+		<mapper resource="mybatis/category-mapping.xml"/>
 	</mappers>
 </configuration>

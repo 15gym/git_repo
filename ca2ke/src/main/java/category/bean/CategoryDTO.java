@@ -1,4 +1,4 @@
-package item.bean;
+package category.bean;
 
 public class CategoryDTO {
 	private int i_category;

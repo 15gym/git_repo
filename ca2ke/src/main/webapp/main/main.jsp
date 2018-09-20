@@ -4,8 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="../assets/css/main.css"/>
-<link rel="stylesheet" href="../assets/css/carousel.css"/>
+<link rel="stylesheet" href="/ca2ke/assets/css/main.css"/>
+<link rel="stylesheet" href="/ca2ke/assets/css/carousel.css"/>
 <title></title>
 </head>
 <body>

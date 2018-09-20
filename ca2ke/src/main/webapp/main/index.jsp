@@ -20,8 +20,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="../assets/css/index.css"/>
-<link rel="stylesheet" href="../assets/css/carousel.css"/>
+<link rel="stylesheet" href="/ca2ke//assets/css/index.css"/>
+<link rel="stylesheet" href="/ca2ke/assets/css/carousel.css"/>
 <title></title>
 </head>
 <body>
@@ -158,9 +158,9 @@
 
 			</div>
 			<div id="map" style="width:auto;height:400px;"></div>
-			<div class="custom_zoomcontrol radius_border"> 
-		        <span onclick="zoomIn()"><img src="http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_plus.png" alt="확대"></span>  
-		        <span onclick="zoomOut()"><img src="http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_minus.png" alt="축소"></span>
+			<div class="map_btn"> 
+		        <span onclick="zoomIn()" class="map_btn1">+</span>  
+		        <span onclick="zoomOut()" class="map_btn2">-</span>
 		    </div>
 		</div>
     </div>
@@ -216,7 +216,7 @@
 	var mapContainer = document.getElementById('map'), 
 	mapOption = { 
 	    center: new daum.maps.LatLng(37.571008, 126.992385),
-	    level: 7
+	    level: 9
 	};
 	
 	var map = new daum.maps.Map(mapContainer, mapOption);
